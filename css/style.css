@@ -30,11 +30,6 @@ nav {
     background-color: var(--secondary);
 }
 
-header>img {
-    /* display: inline; */
-    /* width: min-content; */
-}
-
 nav {
     height: 50px;
     display: flex;
