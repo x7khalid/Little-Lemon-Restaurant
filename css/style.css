@@ -13,12 +13,8 @@
     box-sizing: border-box;
 }
 
-h1 {
-    font-size: 2.6vw;
-}
-
 body {
-    background-color: var(--primary);
+    background-color: var(--primary) !important;
 }
 
 /* ---- Header ---- */
@@ -29,11 +25,7 @@ header {
     align-items: center;
 }
 
-header>img {
-    max-width: 600px;
-    width: 80%;
-    height: auto;
-}
+
 
 header,
 nav {
@@ -55,6 +47,9 @@ nav ul {
     padding-block: 8px;
     list-style: none;
     text-align: center;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 nav ul li {
@@ -62,7 +57,6 @@ nav ul li {
 }
 
 nav ul li>a {
-    font-size: 2vw;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--primary);
@@ -79,7 +73,7 @@ nav ul li+li {
 
 /* ---- Footer ---- */
 footer {
-    height: 50px;
+    padding-block: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,27 +83,17 @@ footer {
     margin-top: 18px;
 }
 
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
 /* ---- Main ---- */
 
 /* ---- Top Row ---- */
-.sb {
+
+.sb>div>article {
     background-image: url(https://x7khalid.github.io/Little-Lemon-Restaurant/img/Lemon-Herb-Grilled-Chicken-feat.jpg);
-    /* background-position: right bottom; */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: blur(20);
-    border-radius: 1rem;
-    align-items: center;
-
-    margin: 50px;
-    background-blend-mode: screen;
-    background-color: darkslategrey;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-
-}
-
-.sb>article {
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -118,52 +102,42 @@ footer {
     gap: 20px;
     color: white;
     text-shadow: 4px 4px 4px black;
-}
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(20);
+    border-radius: 1rem;
+    align-items: center;
 
-.sb>article>h1 {
-    /* font-size: 2.6rem; */
-    font-size: 2.6vw;
-}
-
-.sb>article>p {
-    /* font-size: 2.6rem; */
-    font-size: 1vw;
+    margin-block: 50px;
+    background-blend-mode: screen;
+    background-color: darkslategrey;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 /* ---- Bottom Row ---- */
-.sq {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-inline: 50px;
-    flex-wrap: wrap;
-}
 
 /* ---- Cards ---- */
-.sq>article {
-    flex: 1;
-    text-align: center;
+.sq-card {
     background-color: var(--secondary);
     border-radius: 1rem;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     color: var(--primary);
-
     padding: 10px;
+    height: 100%;
 }
 
-.sq>article>ul {
+.sq-card>ul {
     text-align: left;
     list-style: none;
-    margin-top: 20px;
-    padding: 20px;
+    padding: 15px 14px;
 }
 
-.sq>article>ul>li+li {
+.sq-card>ul>li+li {
     margin-top: 10px;
 }
 
-.sq>article>div {
+.sq-card>div {
     display: flex;
     align-items: end;
     justify-content: center;
@@ -190,17 +164,17 @@ footer {
     animation: FadeIn 1s ease 1 normal 0.1s forwards;
 }
 
-.sq>article:nth-child(1) {
+.sq-card:nth-child(1) {
     opacity: 0;
     animation: FadeIn 1s ease 1 normal 0.2s forwards;
 }
 
-.sq>article:nth-child(2) {
+.sq-card:nth-child(2) {
     opacity: 0;
     animation: FadeIn 1s ease 1 normal 0.3s forwards;
 }
 
-.sq>article:nth-child(3) {
+.sq-card:nth-child(3) {
     opacity: 0;
     animation: FadeIn 1s ease 1 normal 0.4s forwards;
 }
